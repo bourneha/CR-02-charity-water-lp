@@ -1,0 +1,43 @@
+/* This is the CSS file for the water landing page */
+
+/* Reset some default styles */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set a basic font for the page */
+}
+
+/* Style for the main container */
+.container {
+    width: 80%; /* Set the width of the container */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Center text inside the container */
+}
+
+/* Style for the header section */
+.header {
+    background-color: #4CAF50; /* Green background for the header */
+    color: white; /* White text color */
+    padding: 20px; /* Add padding around the header */
+}
+
+/* Style for the hero image */
+.hero-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for the call-to-action button */
+.button {
+    background-color: #f44336; /* Red background for the button */
+    color: white; /* White text color */
+    padding: 15px 25px; /* Add padding to the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Change button color on hover */
+.button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}

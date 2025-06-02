@@ -1,0 +1,215 @@
+/* Import a font similar to Charity: Water's style */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Set up the main font and background color */
+/* Remove default margin and padding from the body */
+body {
+  font-family: 'Playfair Display', serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the page fill the whole screen */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container fills the screen */
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: #fffbe6; /* light yellow background */
+}
+
+/* Main yellow border container */
+.main-border {
+  border: 8px solid #FFD600; /* bright yellow border */
+  width: 95vw; /* almost full width */
+  height: 95vh; /* almost full height */
+  margin: 2vh auto; /* center on the page */
+  position: relative;
+  background: white;
+  box-sizing: border-box;
+}
+
+/* Hero section takes up the whole screen */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Make the image fill the hero section */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text sits on top of the image, upper left */
+.hero-text {
+  position: absolute;
+  top: 10%;      /* Position from the top */
+  left: 5%;      /* Position from the left */
+  color: #fff;   /* White text */
+  text-align: left;
+}
+
+/* Make the heading much bigger and bold for more pop */
+.hero-text h1 {
+  margin: 0 0 10px 0;
+  font-size: 4em;           /* Bigger font size */
+  font-weight: bold;
+  text-shadow: 2px 2px 8px #222; /* Add shadow for pop */
+  letter-spacing: 2px;      /* Space out the letters a bit */
+}
+
+/* Subtitle is left aligned */
+.hero-text p {
+  margin: 30px 0 0 0;
+  font-size: 1.7em;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* Button style, moved further down with extra margin */
+.cta-button {
+  display: inline-block;
+  background: #FFD600;
+  color: #222;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 50px; /* Increased space above the button */
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s; /* This makes the animation smooth */
+}
+
+.cta-button:hover {
+  transform: scale(1.1); /* Makes the button grow a bit */
+}
+
+/* Sidebar for icon and nav buttons, fixed to the right side */
+.sidebar {
+  position: fixed; /* Keep sidebar locked on the right */
+  top: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10; /* Make sure it stays above the image */
+}
+
+/* Icon at the top of the sidebar (no yellow circle, just the image) */
+.icon img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 30px;
+  /* No border, no background, just the image */
+}
+
+/* Navigation buttons stacked vertically */
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* Space between buttons */
+}
+
+/* Style for each navigation button */
+.nav-btn {
+  background: #FFD600;
+  color: #222;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  transition: transform 0.2s; /* Smoothly animate size changes */
+}
+
+.nav-btn:hover {
+  background: #ffe066;
+  transform: scale(1.1);
+}
+
+/* Info section for extra structure */
+.info-section {
+  margin: 40px 0 0 0;
+  padding: 28px 32px;
+  background: #e3f2fd;
+  border-radius: 8px;
+  color: #1976d2;
+  max-width: 700px;
+}
+
+.info-section h2 {
+  margin-top: 0;
+  font-size: 2.5em; /* Bigger heading */
+  font-weight: 700;
+  color: #FFD600;
+  text-shadow: 1px 1px 6px #1976d2;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Canaster (water can) icons randomly placed */
+/* Top left canaster */
+.canaster.canaster-top-left {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+/* Bottom left canaster */
+.canaster.canaster-bottom-left {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  width: 50px;
+  height: 50px;
+}
+
+/* Bottom right canaster */
+.canaster.canaster-bottom-right {
+  position: absolute;
+  bottom: 60px;
+  right: 80px;
+  width: 35px;
+  height: 35px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 900px) {
+  .main-border {
+    flex-direction: column;
+    border-width: 8px;
+  }
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #FFD600;
+    justify-content: center;
+    padding: 16px 0;
+  }
+  .content {
+    padding: 0 10px;
+  }
+  .hero-text {
+    left: 5%;
+    top: 10px;
+    max-width: 95%;
+  }
+}
